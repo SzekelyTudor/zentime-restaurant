@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@100&display=swap');
+
+.home {
+    background-image: url("./assets/bgmain.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 98px;
+    height: calc(100vh - 98px);
+}
+
+.mainfood {
+    width: 55%;
+    margin-left: 15%;
+    position: relative;
+    left: 7%;
+}
+
+.right {
+    text-align: left;
+    color: lightgray;
+    position: relative;
+    right: 7%;
+}
+
+.title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 5rem;
+    text-shadow: 0 0 15px black;
+}
+
+.paragraph {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 0 0 15px black;
+}
+
+.home-button {
+    border-radius: 6rem;
+    color: rgb(238, 112, 23);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgb(238, 112, 23);
+    text-shadow: 0 0 15px black;
+}
+
+.home-button:hover {
+    color: lightgray;
+    border-color: lightgray;
+    background-color: rgba(0, 0, 0, 0);
+}
