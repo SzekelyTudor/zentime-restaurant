@@ -13,7 +13,7 @@
     width: 55%;
     margin-left: 15%;
     position: relative;
-    left: 7%;
+    left: 10%;
 }
 
 .right {
@@ -41,6 +41,8 @@
     background-color: rgba(0, 0, 0, 0);
     border-color: rgb(238, 112, 23);
     text-shadow: 0 0 15px black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .home-button:hover {
