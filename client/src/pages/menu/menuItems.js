@@ -22,41 +22,41 @@ export const breakfast = [
 export const pasta = [
 	{
 		title: "Pasta Carbonara",
-		text: "Soup is a liquid food made from a vegetable or animal product, such as vegetables, meat, or fish, that is typically served warm.",
+		text: "ingredients: Guanciale, eggs, Parmesan, black pepper, spaghetti.",
 		image: require("./assets/carbonara.jpg"),
-		price: "$10.00",
+		price: "$8.99",
 	},
 	{
 		title: "Pasta Tuna with vegetables",
-		text: "A sandwich is a type of food typically consisting of two or more cooked meals served together, typically on a plate.",
+		text: "ingredients: Canned tuna is tossed with chopped tomatoes, olives, red onions, capers, parsley, olive oil and lemon juice, and then tossed again with hot fusilli pasta and shredded mozzarella cheese.",
 		image: require("./assets/tunaPasta.jpg"),
-		price: "$10.00",
+		price: "$11.99",
 	},
 	{
 		title: "Pasta Bolognese",
-		text: "Cake is a form of sweet dessert that is typically round, spherical, and sweetened by adding substantially more than one layer of icing to the top of the cake.",
+		text: "ingredients: Tagliatelle, fresh tomatoes, olive oil, beef mince, dry red wine, garlic, dried bay leaves.",
 		image: require("./assets/bolognese.jpg"),
-		price: "$10.00",
+		price: "$8.99",
 	},
 ];
 
 export const drinks = [
 	{
-		title: "Cupcake",
-		text: "A cupcake is a baked dessert consisting of a small cake, typically with a sweet filling, that is typically baked in a wire or metal pan.",
-		image: require("./assets/tea.jpg"),
-		price: "$10.00",
+		title: "Chocolate Cupcakes",
+		text: "Four chocolate cupcakes whith whipped cream and one sweet cherry on each one.",
+		image: require("./assets/briose.jpg"),
+		price: "$6.99",
 	},
 	{
-		title: "Cookie",
-		text: "A cookie is a baked good that is typically small, flat, and sweet, with a savory filling.",
-		image: require("./assets/coffeeShop.jpg"),
-		price: "$10.00",
+		title: "Cheesecake",
+		text: "A generous slice of cheesecake made of sweetest fresh cheese, accompanied by sour fruits.",
+		image: require("./assets/cheescake.jpg"),
+		price: "$7.99",
 	},
 	{
-		title: "Pancake",
-		text: "Pancake is a flat cake, often thin and round, that is prepared with a batter that is cooked by frying, frying, and frying.",
-		image: require("./assets/cocktail.jpg"),
-		price: "$10.00",
+		title: "Macarons",
+		text: "You will get 10 macarons. A macaron is a meringue-based sandwich cookie made with almond flour, egg whites, confectioners' sugar, and food coloring.",
+		image: require("./assets/macarons.jpg"),
+		price: "$9.99",
 	},
 ];

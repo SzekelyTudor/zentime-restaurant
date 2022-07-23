@@ -23,20 +23,83 @@ export default function App() {
 		} else {
 			setCart([...cart, { ...item, frequency: 1 }]);
 		}
+		const toastLiveExample = document.getElementById("liveToast");
+		const toast = new window.bootstrap.Toast(toastLiveExample);
+		toast.show();
+	};
+
+	const removeFromCart = (item) => {
+		const itemInCart = cart.find((i) => i.title === item.title);
+		if (itemInCart.frequency > 1) {
+			setCart([
+				...cart.filter((i) => i.title !== item.title),
+				{ ...item, frequency: itemInCart.frequency - 1 },
+			]);
+		} else {
+			setCart(cart.filter((i) => i.title !== item.title));
+		}
 	};
 
 	return (
-		<BrowserRouter>
-			<NavigationBar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/menu" element={<Menu addToCart={addToCart} />} />
-				<Route path="/catering" element={<Catering />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/delivery" element={<Delivery cart={cart} />} />
-				<Route path="/book" element={<Book />} />
-			</Routes>
-		</BrowserRouter>
+		<>
+			<BrowserRouter>
+				<NavigationBar />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route
+						path="/menu"
+						element={<Menu addToCart={addToCart} />}
+					/>
+					<Route path="/catering" element={<Catering />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route
+						path="/delivery"
+						element={
+							<Delivery
+								cart={cart}
+								removeFromCart={removeFromCart}
+							/>
+						}
+					/>
+					<Route path="/book" element={<Book />} />
+				</Routes>
+			</BrowserRouter>
+			<div
+				className="position-fixed bottom-0 end-0 p-3 mx-3"
+				style={{ zIndex: "11" }}
+			>
+				<div
+					id="liveToast"
+					className="toast hide"
+					role="alert"
+					aria-live="assertive"
+					aria-atomic="true"
+				>
+					<div className="toast-header">
+						<strong className="me-auto">
+							Successfully added to order
+						</strong>
+						<button
+							type="button"
+							className="btn-close"
+							data-bs-dismiss="toast"
+							aria-label="Close"
+						></button>
+					</div>
+					<div className="toast-body">
+						{cart.map((item) => (
+							<div key={item.title}>
+								{item.title} - {item.frequency} -{" $"}
+								{(
+									parseFloat(item.price.slice(1)) *
+									item.frequency
+								).toFixed(2)}
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</>
 	);
 }
