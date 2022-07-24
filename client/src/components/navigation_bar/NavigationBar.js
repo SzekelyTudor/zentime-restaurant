@@ -1,5 +1,5 @@
-import './NavigationBar.css'
-import { Link } from 'react-router-dom';
+import "./NavigationBar.css";
+import { Link } from "react-router-dom";
 
 export default function NavigationBar(props) {
   return (
@@ -38,8 +38,19 @@ export default function NavigationBar(props) {
             </li>
           </ul>
           <div className="d-flex buttons">
-          <Link to="/delivery"> <button className="nav-button btn btn-outline-light me-3">ORDER DELIVERY</button> </Link>
-           <Link to="/book"> <button className="nav-button btn btn-outline-light"> BOOK A TABLE</button> </Link> 
+            <Link to="/delivery">
+              {" "}
+              <button className="nav-button btn btn-outline-light me-3">
+                ORDER DELIVERY
+              </button>{" "}
+            </Link>
+            <Link to="/book">
+              {" "}
+              <button className="nav-button btn btn-outline-light">
+                {" "}
+                BOOK A TABLE
+              </button>{" "}
+            </Link>
           </div>
         </div>
       </div>

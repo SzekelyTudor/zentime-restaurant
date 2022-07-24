@@ -16,11 +16,15 @@ export default function Home(props) {
         <Clock />
         <h3 className="title">Welcome to Zen's Time Restaurant</h3>
         <p className="paragraph">
-        A modern urban meeting point. A place to eat, drink and socialise, for special occasions, and informal everyday affairs.
+          A modern urban meeting point. A place to eat, drink and socialise, for
+          special occasions, and informal everyday affairs.
         </p>
-        <Link to="/book"> <button className="home-button btn btn-secondary btn-lg mt-5 shadow-lg">
-          BOOK A TABLE
-        </button> </Link>
+        <Link to="/book">
+          {" "}
+          <button className="home-button btn btn-secondary btn-lg mt-5 shadow-lg">
+            BOOK A TABLE
+          </button>{" "}
+        </Link>
       </div>
     </div>
   );
