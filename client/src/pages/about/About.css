@@ -1,3 +1,19 @@
 .about {
     margin-top: 98px;
+    background-image: url("./assets/about-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin-top: 98px;
+    height: calc(100vh - 98px);
+}
+
+.about-card {
+    position: absolute;
+    top: calc(3rem + 98px);
+    bottom: 3rem;
+    left: 3rem;
+    width: 31%;
+    background-image: url("./assets/left-about.jpg");
+    background-color: aliceblue;
 }

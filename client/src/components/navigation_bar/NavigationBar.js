@@ -27,11 +27,6 @@ export default function NavigationBar(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="catering">
-                CATERING
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link" to="about">
                 ABOUT
               </Link>

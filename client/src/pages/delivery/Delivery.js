@@ -1,8 +1,17 @@
 import "./Delivery.css";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 export default function Delivery(props) {
+	const [orderDetails, setOrderDetails] = useState({
+		name: "",
+		address: "",
+		phone: "",
+		email: "",
+	});
+
 	return (
 		<>
 			<div className="delivery-bg"></div>
@@ -65,6 +74,8 @@ export default function Delivery(props) {
 							<button
 								type="button"
 								className="btn btn-success btn-lg"
+								data-bs-toggle="modal"
+								data-bs-target="#order-modal"
 							>
 								Place order
 							</button>
@@ -90,6 +101,189 @@ export default function Delivery(props) {
 						</p>
 					</div>
 				)}
+				<div
+					className="modal fade"
+					id="order-modal"
+					tabIndex="-1"
+					aria-labelledby="Finish order"
+					aria-hidden="true"
+				>
+					<div className="modal-dialog modal-dialog-centered">
+						<div className="modal-content bg-dark">
+							<div className="modal-header">
+								<h5 className="modal-title text-white">
+									Finish order
+								</h5>
+								<button
+									type="button"
+									className="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+							<div className="modal-body">
+								<div className="form-group">
+									<div className="form-floating mb-3">
+										<input
+											type="text"
+											className="form-control bg-dark text-white"
+											id="name"
+											placeholder="Enter your name"
+											onChange={(e) =>
+												setOrderDetails({
+													...orderDetails,
+													name: e.target.value,
+												})
+											}
+										/>
+										<label
+											htmlFor="name"
+											className="text-white"
+										>
+											Name
+										</label>
+									</div>
+
+									<div className="form-floating mb-3">
+										<input
+											type="text"
+											className="form-control bg-dark text-white"
+											id="address"
+											placeholder="Enter your address"
+											onChange={(e) =>
+												setOrderDetails({
+													...orderDetails,
+													address: e.target.value,
+												})
+											}
+										/>
+										<label
+											htmlFor="address"
+											className="text-white"
+										>
+											Address
+										</label>
+									</div>
+									<div className="form-floating mb-2">
+										<input
+											type="text"
+											className="form-control bg-dark text-white"
+											id="phone"
+											placeholder="Enter your phone number"
+											onChange={(e) =>
+												setOrderDetails({
+													...orderDetails,
+													phone: e.target.value,
+												})
+											}
+										/>
+										<label
+											htmlFor="phone"
+											className="text-white"
+										>
+											Phone
+										</label>
+									</div>
+								</div>
+								<div className="form-group">
+									<label
+										htmlFor="payment"
+										className="text-white mb-2"
+									>
+										Payment method
+									</label>
+									<select
+										className="form-control bg-dark text-white mb-2"
+										id="payment"
+									>
+										<option>Credit card</option>
+										<option>Debit card</option>
+										<option>Cash</option>
+									</select>
+
+									<label
+										htmlFor="delivery"
+										className="text-white mb-2"
+									>
+										Delivery method
+									</label>
+									<select
+										className="form-control bg-dark text-white mb-2"
+										id="delivery"
+									>
+										<option>Delivery</option>
+										<option>Pickup</option>
+									</select>
+								</div>
+
+								<div className="form-group">
+									<label
+										htmlFor="observations"
+										className="text-white mb-2"
+									>
+										* Observations
+									</label>
+									<textarea
+										className="form-control bg-dark text-white mb-2"
+										id="observations"
+										rows="3"
+										placeholder="Enter your observations"
+									></textarea>
+
+									<label
+										htmlFor="total"
+										className="text-white mb-2"
+									>
+										Total
+									</label>
+									<input
+										type="text"
+										className="form-control bg-dark text-white"
+										id="total"
+										placeholder="Total"
+										value={
+											"$" +
+											props.cart.reduce(
+												(acc, item) =>
+													(
+														parseFloat(acc) +
+														parseFloat(
+															item.price.slice(1)
+														) *
+															item.frequency
+													).toFixed(2),
+												0
+											)
+										}
+										readOnly
+									/>
+									{orderDetails.phone.length > 0 &&
+									orderDetails.address.length > 0 &&
+									orderDetails.name.length > 0 ? (
+										<Link to="/">
+											<button
+												className="btn btn-lg btn-success w-100 mt-3"
+												onClick={props.clearCart}
+												data-bs-dismiss="modal"
+											>
+												Place order
+											</button>
+										</Link>
+									) : (
+										<button
+											className="btn btn-lg btn-success w-100 mt-3"
+											onClick={props.clearCart}
+											data-bs-dismiss="modal"
+											disabled
+										>
+											Place order
+										</button>
+									)}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</>
 	);

@@ -3,7 +3,7 @@ export const breakfast = [
 		title: "Yogurt with blueberries and cereal",
 		text: "ingredients: Sweet yogurt, blueberries, strawberries or honey and whole grains or oatmeal",
 		image: require("./assets/iaurt.jpg"),
-		price: "$5.49",
+		price: "$5.99",
 	},
 	{
 		title: "Croque monsieur",
@@ -43,7 +43,7 @@ export const pasta = [
 export const drinks = [
 	{
 		title: "Chocolate Cupcakes",
-		text: "Four chocolate cupcakes whith whipped cream and one sweet cherry on each one.",
+		text: "Four chocolate cupcakes whith whipped cream and one sweet cherry on top of each one.",
 		image: require("./assets/briose.jpg"),
 		price: "$6.99",
 	},

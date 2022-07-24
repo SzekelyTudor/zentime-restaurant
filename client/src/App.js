@@ -4,7 +4,6 @@ import NavigationBar from "./components/navigation_bar/NavigationBar";
 import Home from "./pages/home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./pages/menu/Menu";
-import Catering from "./pages/catering/Catering";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Delivery from "./pages/delivery/Delivery";
@@ -40,6 +39,10 @@ export default function App() {
 		}
 	};
 
+	const clearCart = () => {
+		setCart([]);
+	};
+
 	return (
 		<>
 			<BrowserRouter>
@@ -50,7 +53,6 @@ export default function App() {
 						path="/menu"
 						element={<Menu addToCart={addToCart} />}
 					/>
-					<Route path="/catering" element={<Catering />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route
@@ -59,6 +61,7 @@ export default function App() {
 							<Delivery
 								cart={cart}
 								removeFromCart={removeFromCart}
+								clearCart={clearCart}
 							/>
 						}
 					/>
@@ -67,7 +70,7 @@ export default function App() {
 			</BrowserRouter>
 			<div
 				className="position-fixed bottom-0 end-0 p-3 mx-3"
-				style={{ zIndex: "11" }}
+				style={{ zIndex: "1" }}
 			>
 				<div
 					id="liveToast"
