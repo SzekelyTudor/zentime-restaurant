@@ -1,3 +1,4 @@
+import React from "react";
 import MenuItem from "../../components/menu_item/MenuItem";
 import "./Menu.css";
 import { breakfast, pasta, drinks } from "./menuItems";

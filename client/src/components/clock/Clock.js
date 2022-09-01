@@ -1,5 +1,5 @@
 import "./Clock.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { format } from "date-fns";
 
 export default function Clock(props) {

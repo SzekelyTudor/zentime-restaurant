@@ -1,3 +1,4 @@
+import React from "react";
 import "./Home.css";
 import Clock from "../../components/clock/Clock";
 import { Link } from "react-router-dom";

@@ -1,3 +1,4 @@
+import React from "react";
 import "./About.css";
 
 export default function About(props) {
@@ -15,10 +16,11 @@ export default function About(props) {
         </p>
         <p className="fs-5">
           The foundation for our menu is a vast collection of spices with a
-          focus on the most well-known and loved dishes from around the world, which we have meticulously sourced
-          over the past few years. We explore ingredients such as Grains of
-          Selim, a smoky peppercorn with the scent of eucalyptus, plantains and
-          scotch bonnet chillies, which we ferment, burn and pickle.
+          focus on the most well-known and loved dishes from around the world,
+          which we have meticulously sourced over the past few years. We explore
+          ingredients such as Grains of Selim, a smoky peppercorn with the scent
+          of eucalyptus, plantains and scotch bonnet chillies, which we ferment,
+          burn and pickle.
         </p>
         <h4 className="fw-bold">Open:</h4>
         <p>(Monday - Saturday) 08:00 am - 10:00 pm</p>
