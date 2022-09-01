@@ -1,4 +1,7 @@
-import "./Clock.css";
+// styles
+import styles from "./Clock.module.css";
+
+// imports
 import React, { useState, useEffect } from "react";
 import { format } from "date-fns";
 
@@ -12,7 +15,9 @@ export default function Clock(props) {
   });
 
   return (
-    <div className="card d-flex flex-row justify-content-around shadow-lg bg-dark text-center">
+    <div
+      className={`d-flex flex-row justify-content-around shadow-lg bg-dark text-center ${styles.card}`}
+    >
       {format(time, "EEEEEE:HH:mm:ss")
         .split(":")
         .map((el) => {

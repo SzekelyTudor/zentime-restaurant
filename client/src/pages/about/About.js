@@ -1,5 +1,8 @@
+// styles
+import styles from "./About.module.css";
+
+// imports
 import React from "react";
-import "./About.css";
 
 export default function About(props) {
   return (

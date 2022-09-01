@@ -1,12 +1,15 @@
+// styles
+import styles from "./NavigationBar.module.css";
+
+// imports
 import React from "react";
-import "./NavigationBar.css";
 import { Link } from "react-router-dom";
 
 export default function NavigationBar(props) {
   return (
     <nav className="navbar navbar-dark fixed-top navbar-expand-lg">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <Link className={styles["navbar-brand"]} to="/">
           Zen's Time
         </Link>
         <button

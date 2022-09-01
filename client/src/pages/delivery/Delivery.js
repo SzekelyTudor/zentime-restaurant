@@ -1,4 +1,7 @@
-import "./Delivery.css";
+// styles
+import styles from "./Delivery.module.css";
+
+// imports
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";

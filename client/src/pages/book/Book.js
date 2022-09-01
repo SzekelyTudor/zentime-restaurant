@@ -1,4 +1,7 @@
-import "./Book.css";
+// styles
+import styles from "./Book.module.css";
+
+// imports
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
