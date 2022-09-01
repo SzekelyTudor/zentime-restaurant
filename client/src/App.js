@@ -1,5 +1,4 @@
-import { useState } from "react";
-import "./App.css";
+import React, { useState } from "react";
 import NavigationBar from "./components/navigation_bar/NavigationBar";
 import Home from "./pages/home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

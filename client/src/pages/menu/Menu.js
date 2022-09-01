@@ -1,5 +1,9 @@
+// styles
+import styles from "./Menu.module.css";
+
+// imports
+import React from "react";
 import MenuItem from "../../components/menu_item/MenuItem";
-import "./Menu.css";
 import { breakfast, pasta, drinks } from "./menuItems";
 
 export default function Menu(props) {

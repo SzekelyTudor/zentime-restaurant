@@ -1,4 +1,8 @@
-import "./MenuItem.css";
+// styles
+import styles from "./MenuItem.module.css";
+
+// imports
+import React from "react";
 
 function MenuItem(props) {
   const addToCart = () => {

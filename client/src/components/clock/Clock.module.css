@@ -1,0 +1,11 @@
+.card {
+  position: relative;
+  top: -4rem;
+  padding: 1rem;
+  font-size: 4rem;
+  border: 0;
+}
+
+.card span {
+  text-shadow: 0 0 10px black;
+}

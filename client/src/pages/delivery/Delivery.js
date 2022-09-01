@@ -1,8 +1,11 @@
-import "./Delivery.css";
+// styles
+import styles from "./Delivery.module.css";
+
+// imports
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Delivery(props) {
   const [orderDetails, setOrderDetails] = useState({
